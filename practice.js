@@ -9,4 +9,36 @@ function isOval(sentence) {
 
 const sentence = 'Albus Dumbledore founded the Order of the Phoenix';
 
-isOval(sentence);
+
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`
+    }
+
+    set fullName(value) {
+        [this.firstName, this.lastName] = value.split(" ");
+    }
+}
+
+const employee = new Person('taraka', 'koda');
+
+console.log(employee.firstName);
+
+employee.fullName = "srinivas koda"
+console.log(employee.fullName);
+
+
+
+
+
+
+
+
+
+
+

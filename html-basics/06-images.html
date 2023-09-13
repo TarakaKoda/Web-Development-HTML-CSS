@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Images</title>
+    <style>
+        .coffee {
+            height: 100px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 50px;
+        }
+
+        .profile-pic {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 50px;
+            filter:grayscale();
+        }
+        
+        .profile-pic:hover {
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+            filter: none;
+        }
+    </style>
+</head>
+<body>
+    <div><img class="coffee" src="utils/images/coffee.jpg" alt="A coffee cup on a table"></div>
+    <div><img class="profile-pic" src="utils/images/profile-pic.jpg" alt="Profile Picture of Taraka Satya Srinivasu Koda"></div>
+</body>
+</html>
