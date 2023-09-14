@@ -1,0 +1,84 @@
+-> Understanding CSS
+    we can provide css in three different ways
+    1. Embedded stylesheets
+    2. External stylesheets
+    3. In-line stylesheets
+
+-> Embedded stylesheets are used within the html file within the style element in the head section
+-> External stylesheets are written in a different folder which can import by using the <link> element
+-> In-line stylesheets are written within the element itself these are not recommended to use more often 
+
+-> Normalizing css: Normalizing CSS is a technique used in web development to make default styles consistent 
+                    across different web browser. 
+
+-> Basic Selectors: 1. we can select by their type (body, p, h1, section, article, etc..)
+                    2. we can be more descriptive by providing a class or an id to an element and select by the class or id
+                    3. selecting by the attributes this type of selectors are not used that often. 
+
+-> Relational Sectors: Relational Selectors are used to select the child elements in the section and the siblings to the parent section
+                    Child Relationship: 
+                    1.  parent p {
+                               some styling
+                        }
+                        this will select all the paragraphs elements in a section 
+                    2.  parent > p {
+                            some styling
+                        }
+                        this will select all the children of the parent section 
+                    Siblings Relationship:
+                    3. parent + p {
+                        some styling
+                       }
+                       this will select the first <p> comes right after the parent section
+                    if we want select all the siblings we can use ~ instead of + to select all the siblings
+-> Relational Selectors helps to write the code more cleaner not like the basic selectors
+    1. Cleaner markup
+    2. Can be fragile: they are dependent upon the position in the DOM (Document Object Model)                
+    3. They are not fast as the Basic Selector. Because how the browser read and checks the selectors
+       they start checking from the right side so first it will select all the paragraph elements and they then it will move to next checking
+        
+-> Pseudo Classes: To style elements in a particular state
+                   :first-child, :firs-of-child, :last-child, :last-of-type, :nth-child(), :visited, :link, :hover, :focus.
+                
+-> Pseudo Elements: To style a part of an element.
+                   ::first-letter, ::first-line, ::before, ::after, ::selection
+
+
+-> Selectors Specificity(weight): Quit often we will come across the a situation like multiple rule can target to a single element.
+                          Then the concept of selector Specificity will come 
+                          let see how the browser will figure out what style should be applied.
+                           /\<--- #id selector: because we can have only id selector for a single elements 
+                          /  \<-- .class & attribute selectors: these are less specific because we can have multiple class and attribute selectors.
+                         /____\<- element selector: we know that we can have many element of different type.                  
+
+-> Inheritance: In web development inheritance is an important concept to know as a frontend developer
+                these are some of the properties that are inherit from the parent element into child element.
+                To avoid a property from inheriting from the parent class we can do by making the property-value: initial
+                similarly, we can make force inheritance by adding a property-value: inherit to force the inheritance.
+
+
+-> Colors: 1. Named Colors, 2. RGB values, 3. HSV values, 4. Hexadecimal Values
+
+-> Gradients: In CSS Gradients are used to apply multiple color in a single image to make it more colorful.
+              we can use the background or background-image property, we cannot use the background color property.
+              we can use background property for both image and color too
+              we have two types of Gradients:
+              1. Linear Gradient: Transitions colors along a straight line.
+              2. Radial Gradient: Radiates colors out from a center point in a circular or elliptical pattern.
+
+-> Borders: We have border property for creating borders and styling and coloring the borders.
+            Borders can be created using the border property
+            1. border: 1px(width of the border) solid(style) green(color)
+            2. border-width: 10px(top) 20px(right) 10px(bottom) 20px(left) // if we don't supply the bottom value it will take the to value similarly to left value
+            3. border-style: solid(top) dotted(right) double(bottom) dashed(left) // this will also apply the same rule if we forget to supply the alternate value will be assigned
+            4. border-color: green red blue yellow // this will also follows the same rules above mentioned.
+            5. border-radius: this will make the border round based on the value we passed.
+  alternatively we have descriptive properties for each, we wont use them most of the time.
+
+-> Shadows: We can make shadows to the text and the box in css using the text-shadow and box-shadow properties
+            box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] [color];
+            text-shadow: [horizontal offset] [vertical offset] [blur radius] [color];
+            Unlike the box-shadow property, the text-shadow property in CSS does not have a "spread radius" value.
+
+
+

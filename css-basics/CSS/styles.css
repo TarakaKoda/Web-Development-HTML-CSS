@@ -1,0 +1,237 @@
+body {
+    height: 1000px;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+#products {
+    font-style: italic;
+    border: 1px;
+}
+
+.product {
+    font-weight: bold;
+}
+
+a[target="_blank"] {
+    font-style: italic;
+}
+
+/* checks if the string google is present in the href attribute */
+a[href*="google"] {
+    color: orange;
+}
+
+/* checks if the href is starts with "https" and ends with ".com" */
+a[href^="https"] [href$=".com"] {
+    font-style: italic;
+}
+
+/* this will select the children of the parent section */
+#products p {
+    color: blue;
+    font-style: italic;
+}
+
+
+/* this will select the first child p in the section */
+#products > p {
+    color: orange;
+    font-style: italic;
+}
+
+/* this will select the siblings of the section */
+/* this will select the paragraph element next after the parent section*/
+#products + p {
+    color: brown;
+    font-style: italic; 
+}
+/* if we add another p element right after the section we don't get the any color or font */
+ 
+/* what if we want to style all the siblings write after the parent */
+#products ~ p {
+    color: green;
+    font-style: italic;
+}
+/* this will be select all the siblings comes next after the parent section */ 
+/* Pseudo Class Selectors */
+article p:first-child {
+    font-size:  140%;
+    font-style: italic;
+} 
+/* this is more complicate if we add another element above the first element 
+    that will become the first child so this style will be applied to that child */
+
+/* we have another Pseudo selector similar to this selector */
+article :first-of-type {
+    font-size: 140%;
+    font-style: italic;
+}
+/* this will select the first type of element in the section */
+
+/* similarly we have last-child and last-of-type pseudo selectors */
+article p:last-child {
+    font-size: 200%;
+    font-style: italic;
+}
+
+/* similarly we can select the last of type */
+article :last-of-type {
+    font-size: 300%;
+    font-style: italic;
+}
+
+/* this will select all the odd element in the un-order list */
+ul li:nth-child(odd) {
+    color: deeppink 
+}
+
+/* this will select all the even number elements in the un-order list */
+ul li:nth-child(even) {
+    color: green;
+}
+/* we can also select a formula like 3n this will select every third element */
+
+a:visited, a:link {
+    color: dodgerblue;
+}
+/* visited will the all the links that we are visited */
+/* link will the all the link that are used in our html */
+
+/* we have another pseudo class called hover */
+a:hover, a:focus{
+    color: brown;
+}
+
+/* if we what make the first letter in a p element bold and font size */
+p::first-letter {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+/* if we want to style the first line in the p element */
+p::first-line {
+    font-style: italic;
+}   
+
+::selection {
+    background-color: deeppink;
+}
+/* this will only apply to the paragraph element, if we add heading to this paragraph */
+/* if we remove the p element then this will be applied to all the selection elements */
+
+/* if we want to insert any content in-front of a paragraph element */
+p::before {
+    content: "...";
+    display: block;
+}
+
+/* if we want to insert any content after the paragraph element we can use the before pseudo element */
+p::after {
+    content: "...";
+    display: block;
+}
+
+/* h1 {
+    color: dodgerblue !important;
+} */
+
+.highlight {
+    color: red;
+}
+
+#first {
+    color: deeppink;
+}
+
+.highlight#first {
+    color: green;
+}
+
+article h1#first.highlight {
+    color: darkblue;
+}
+
+/* Inheritance */
+p {
+    color: deeppink;
+    border: 1px solid black
+}
+
+strong {
+    color: initial; /* this will make stop the inheritance and make the color default color initial color */
+    border: inherit; /* this will inherit the property of the parent element */
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(181, 17, 63);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(17, 17, 181, 0.5);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #FFEBCD;
+}
+ 
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: hsla(53, 100%, 40%, 0.5);
+     
+}
+/* Gradients */
+/* Gradients can only be applied to images so we can use the background-image element or just a background
+   background can be applied to both image and color */
+.box {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, deeppink, lightgreen, tomato);
+}
+
+.box {
+    width: 400px;
+    height: 200px;
+    background: radial-gradient(circle at top left, white, yellow)
+}
+
+.box {
+    width: 100px;
+    height: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+/* Borders in css */
+.box {
+    width: 100px;
+    height: 100px;
+    background: dodgerblue;
+    border: 10px solid royalblue;
+    border-radius: 50px;
+    border-width: 10px 20px; /* trbl*/
+    border-style: dashed solid dotted double;
+    border-color: yellow deeppink black white;
+}
+
+/* Shadows in css */
+.box-shadows {
+    width: 200px;
+    height: 200px;
+    background: gold;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-top: 1px;
+}
+
+h1 {
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
