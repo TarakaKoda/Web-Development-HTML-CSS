@@ -1,0 +1,72 @@
+-> Flexible Box Layout (FlexBox): Used to laying out elements in one direction.
+                Like in a row or a column.
+
+                display: flex; // we use this property to make the container FlexBox
+                flex-direction: row; // by default the flex makes items align horizontally 
+                                     // we can use the "column"  property value to make the items aline vertically"
+                flex-direction: column-reverse; // this will align the items in a vertically but in a reverse order.
+                flex-direction: row-reverse; // similarly, this will align the items in a horizontal but in reverse order
+                
+                to align items we need to understand the concept of axes in flex
+                in flex we have two axes:
+                main(primary) axis
+                cross(secondary) axis
+                these are depends on the direction:
+                direction: row                   direction: column
+                -----------------> main          -----------------> cross
+                |                                |
+                |                                |
+                |                                |
+                |                                |
+                |                                |
+                |                                |
+                V                                V
+                cross                           main
+
+                why these are important? because we have to remember two properties:
+                1. justify-content: (along the main axis)
+                2. align-items: (along the cross axis)
+
+                justify-content: flex-start; // the default value where the items will the aligned at the start
+                justify-content: flex-end; // this will align the items at the end of the container in main axis
+                justify-content: center; // this will align at the center of the container
+                justify-content: space-evenly // this will give an even space between the elements
+                justify-content: space-between // the first and the last items are pushed at the end of the container and the items between them have space evenly
+
+                align-items: flex-start; // we can use the align-items to align the items in a cross axis. by default it will be flex-start
+                align-items: flex-end; // similarly we have the flex-end to move the bottom of the container
+
+                align-self: flex-end; // this property is used to align the a single item to the top and bottom.
+
+                remaining are the same as the justify-content property
+
+                flex-wrap: nowrap; // by default it will be nowrap and the items will get small as the items in the container increases
+                flex-wrap: wrap; // this property is used to maintain the size of the container as it is and if we add additional items this will move the new items to the next line
+                
+                we use the align-content: center; to center all the elements present in the container
+
+                flex sizing:
+                where we have some special properties that can resize the items
+                these should be used in the items elements not the parent container
+
+                flex-basis: auto; // by default it will be set to default auto that means will target the width of the items
+                this is also used to set the initial size of an item
+
+                (why only width not the height because the flex-direction is set row so it will change the width)
+                (similarly if we set he flex-direction to the column this will target to the height of the item)
+
+                flex-grow: 1; // the growth factor
+                flex-shrink: 3; // the shrink factor
+                flex: is the combination of the above three.
+                
+
+
+
+
+
+
+
+
+
+                
+                

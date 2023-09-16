@@ -1,0 +1,55 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    /* background-color: black; */
+}
+
+.container {
+    display: grid;
+    /* 3 x 2  */
+    /* grid-template-rows: repeat(3, 10rem); */
+    /* grid-template-columns: repeat(2, 10rem); */
+    /* this is a short hand syntax to the above code to create a grid */
+    grid-template: 100px auto 100px / 20fr 60fr 20fr;
+    grid-template-areas: 
+    "header  header header" 
+    "left-sidebar main right-sidebar" 
+    "left-sidebar footer right-sidebar";
+    border: 2px solid lightgray;
+    /* justify-items: center; align the items horizontally */
+    /* align-items: center;  align the items vertically */
+    /* justify-content: center; align the multiple items in a container horizontally */
+    /* align-content: center; align the multiple items in the container vertically  */
+    height: 100vh;
+    /* row-gap: 1rem;
+    column-gap: 1rem; */
+    gap: 1rem;
+}
+
+.box {
+    background: gold;
+}
+
+.box-header {
+    grid-area: header;
+}
+
+.box-left-sidebar {
+    grid-area: left-sidebar;
+}
+
+.box-right-sidebar {
+    grid-area: right-sidebar;
+}
+
+.box-main {
+    grid-area: main;
+}
+
+.box-footer {
+    grid-area: footer;
+}

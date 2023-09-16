@@ -1,0 +1,45 @@
+html {
+    font-size: 62.5%; 
+}
+
+.container {
+    border: 3px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 90vh;
+}
+
+.box {
+    flex-basis: 10rem; 
+    flex-grow: 3;
+    flex-shrink: 1;
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* to make the first element to the top */
+.box-one {
+    align-self: flex-start;
+} 
+
+/* we can also achieve the same thing using the pseudo class */
+.box:nth-child(odd) {
+    align-self: flex-start;
+}
+
+/* this will make the even child to be move to the bottom of the container */
+.box:nth-child(even) {
+    flex-grow: 1;
+    align-self: flex-end;
+    flex-shrink: 0;
+}
+
+

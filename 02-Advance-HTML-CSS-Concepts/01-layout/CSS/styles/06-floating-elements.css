@@ -1,0 +1,23 @@
+html {
+    font-size: 62.5%;
+}
+
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.tweet {
+    width: 50rem;
+    border: 2px solid lightgray;
+}
+
+.clearfix::after {
+    content: "";   
+    display: block;
+    clear: both;
+}
+
