@@ -11,7 +11,7 @@ const sentence = 'Albus Dumbledore founded the Order of the Phoenix';
 
 
 class Person {
-    constructor(firstName, lastName) {
+constructor(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -32,6 +32,9 @@ console.log(employee.firstName);
 employee.fullName = "srinivas koda"
 console.log(employee.fullName);
 
+const newFun = () => {
+    
+}
 
 
 
