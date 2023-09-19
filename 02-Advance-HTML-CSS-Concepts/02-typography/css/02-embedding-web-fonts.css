@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'opensans';
+    src: url('fonts/open-sans/opensans-bold-webfont.woff2') format('woff2'),
+         url('fonts/open-sans/opensans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'opensans';
+    src: url('fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
+         url('fonts/open-sans/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: optional;
+
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'opensans', Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px;
+    width: 50vw;
+    border-radius: 20px;
+}
+
+.heading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.paragraph {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 2rem;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    align-self: flex-start;
+}

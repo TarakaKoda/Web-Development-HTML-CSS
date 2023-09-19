@@ -35,4 +35,5 @@ p {
 
 a {
     align-self: flex-start;
+    text-decoration: none;
 }
