@@ -1,0 +1,11 @@
+body {
+    background: url(../images/rose-petals.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+img {
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,59 @@
+IMAGES: 
+1. Image types and formats
+2. background Images
+3. CSS Sprites
+4. Data URLs
+5. Clippings Images
+6. Applying filters
+7. Supporting high-density screens
+8. Resolution switching
+9. Using modern images formats (WebP)
+10. Art direction
+11. Scalable Vector Graphics (SVG)
+12. Icon fonts
+
+-> Images types and formats: In computer we have two types of images
+                             1. Raster: we use raster images for photos. 
+                             2. Vector: we use vector for icons and backgrounds.
+
+   1. Raster: -> Come from cameras/scanners
+              -> Formats: JPG(Joint Photographic Experts Group), PNG(Portable Network Graphics), GIF(Graphics Interchange Format)
+              -> More Pixel = Larger file size
+              -> Look blurry if scaled up
+
+   2. Vector: -> we can create vector adobe illustrator 
+              -> Created in software (illustrator)
+              -> Format: SVG
+              -> Scalable Vector Graphics
+              -> Look sharp at any size
+
+Raster images formats:
+
+                Colors       Transparency        Animation
+JPEG             16M             No                 No
+GIF              256             Yes                Yes
+PNG              16M             Yes                Yes
+WebP             16M             Yes                Yes
+
+-> In HTML we have two types of images: 
+   1. Content Images
+   2. background Images
+
+-> Content Images: Content images are images that are an integral part of the page's content. 
+                   They are usually displayed within the HTML document and are typically surrounded by text or other content. 
+                   Content images are included using the <img> element in HTML.
+
+-> background Images: Background images, as the name suggests, are used as a background for a specific element or the entire web page. 
+                      They are set using CSS properties like background-image. Background images don't appear as standalone elements in the HTML structure but rather serve as a visual backdrop.
+
+-> CSS Sprite: This is a optimizing technique used with the images ie., if we have a multiple images used in the webpage. if we reload that page then the browser will send multiple requests to the server
+               for each image to load this is time time consuming we can optimize this using the css sprites. Its is a technique to combine the all the images and make it into a single image 
+               so that if we refers the page the browser will send only a single request.
+               But, this comes with the problems ie.,
+               1. the file size can get too Larger
+               2. sprite are not flexible.
+
+-> Data URLs or formerly called Data URIs: This is another optimization technique to reduce the http requests.
+   using this technique we can directly embedded the images to the head section of the html file.
+
+-> Clipping: 

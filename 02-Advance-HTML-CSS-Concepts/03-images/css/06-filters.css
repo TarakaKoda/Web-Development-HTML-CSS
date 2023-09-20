@@ -1,0 +1,7 @@
+.meal  {
+    width: 100px;
+}
+
+.meal:hover  {
+    filter: grayscale(70%) blur(2px) drop-shadow(12px 16px 20px black);
+}
