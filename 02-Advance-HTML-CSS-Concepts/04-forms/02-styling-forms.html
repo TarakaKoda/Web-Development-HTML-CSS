@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Forms</title>
+    <link rel="stylesheet" href="css/02-styling-forms.css">
+</head>
+<body>
+    <div class="register">
+        <h1 class="register-heading">Register Here</h1>
+        <form class="register-form">
+                <div>
+                    <label class="email-label" for="email">Email</label>
+                    <input class="email-input" id="email" type="email">
+                </div>
+                <div>
+                    <label class="full-name-label" for="full-name">Full Name</label>
+                    <input class="full-name-input" id="full-name type="text">
+                </div>
+                <div>
+                    <label class="register-password-label" for="register-password">Password</label>
+                    <input class="register-password-input" id="register-password" type="password">
+                </div>
+                <button class="sign-up-btn" type="submit">Sign Up</button>
+                <p class="already">Have an account?<a class="login-link" href="#">Log in</a></p>
+        </form>
+    </div>
+    <div class="login">
+        <h1 class="login-heading">Login Here</h1>
+        <form class="login-form">
+                <div>
+                    <label class="username-label" for="username">Username</label>
+                    <input class="username-input" id="username" type="text">
+                </div>
+                <div>
+                    <label class="password-label" for="password">Password</label>
+                    <input class="password-input" id="password" type="password">
+                </div>
+                <button class="login-btn" type="submit">Login</button>
+                <a class="forgot-password" href="#">Forgot password?</a>
+        </form>
+    </div>
+</body>
+</html>
