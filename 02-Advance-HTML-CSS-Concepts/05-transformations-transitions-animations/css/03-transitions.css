@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    overflow: hidden;
+    transition: background-color 2s, transform 1s ease-in-out ;
+}
+
+.box:hover {
+    transform: rotate(360deg) perspective(200px) translateZ(50px);
+    background-color: blue;
+}

@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    overflow: hidden;
+}
+
+@keyframes pop {
+    0% {
+        transform: rotate(0);
+        background-color: red;
+    }
+
+    20% {
+        transform: rotate(45deg) scale(0);
+        background-color: dodgerblue;
+    }
+
+    40% {
+        transform:rotate(90deg) scale(1.5);
+        background-color: yellow;
+    }
+
+    60% {
+        transform: rotate(180deg) scale(0);
+        background-color: green;
+    }
+
+    80% {
+        transform: rotate(270deg) scale(1.5);
+        background-color: deeppink;
+    }
+
+    100% {
+        transform: rotate(360deg) scale(0);
+        background-color: violet;
+    }
+}
+
+.animation-pop {
+    animation-name: pop;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

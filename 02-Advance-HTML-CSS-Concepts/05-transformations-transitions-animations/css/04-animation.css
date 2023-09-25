@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.5);
+    }
+
+    50% {
+        transform: rotate(45deg);
+        background-color: #ff6347;
+    }
+
+    100% {
+        text-align: rotate(0);
+    }
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    overflow: hidden;
+    animation-name: pop;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+}
