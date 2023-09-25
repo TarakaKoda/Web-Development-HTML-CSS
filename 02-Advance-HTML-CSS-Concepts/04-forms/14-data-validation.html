@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body>
+    <form>
+    <fieldset>
+        <legend>Name</legend>
+        <input type="text" required minlength="3" maxlength="10">
+        <legend>Email</legend>
+        <input type="email" required minlength="3" maxlength="25">
+        <legend>Number</legend>
+        <input type="number" required min="0" max="5">
+        <button type="submit">submit</button>
+    </fieldset>
+    </form>
+</body>
+</html>
